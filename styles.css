@@ -3,7 +3,6 @@
   --olive-deep: #7B7822;
   --olive-hover: #5E5C18;
   --olive-soft: #F2F1DF;
-  --olive-ring: rgba(160, 156, 53, 0.28);
 
   --ink: #1A1C13;
   --ink-body: #3E4136;
@@ -13,14 +12,13 @@
   --surface: #FFFFFF;
   --surface-subtle: #FAF9F5;
   --border: rgba(26, 28, 19, 0.09);
-  --border-strong: rgba(26, 28, 19, 0.16);
+  --border-strong: rgba(26, 28, 19, 0.15);
 
-  --radius-sm: 10px;
   --radius-md: 16px;
-  --radius-lg: 22px;
+  --radius-lg: 20px;
 
-  --shadow-card: 0 1px 2px rgba(26, 28, 19, 0.03), 0 10px 30px rgba(26, 28, 19, 0.045);
-  --shadow-hover: 0 4px 12px rgba(26, 28, 19, 0.05), 0 16px 36px rgba(123, 120, 34, 0.12);
+  --shadow-card: 0 1px 2px rgba(26, 28, 19, 0.03), 0 10px 28px rgba(26, 28, 19, 0.04);
+  --shadow-hover: 0 4px 12px rgba(26, 28, 19, 0.05), 0 14px 32px rgba(123, 120, 34, 0.12);
 }
 
 *,
@@ -42,11 +40,10 @@ body {
   display: flex;
   flex-direction: column;
   background-color: var(--bg);
-  background-image: radial-gradient(ellipse 80% 420px at 50% -120px, rgba(160, 156, 53, 0.12), transparent 72%);
   color: var(--ink);
   font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   line-height: 1.6;
-  border-top: 4px solid var(--olive);
+  border-top: 3px solid var(--olive);
 }
 
 a {
@@ -97,11 +94,113 @@ a:focus-visible {
 }
 
 /* =========================================================
+   HEADER (shared across landing & subpages)
+   ========================================================= */
+.sub-header {
+  padding-block: 0.95rem;
+  border-bottom: 1px solid var(--border);
+  background-color: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(10px);
+}
+
+.sub-header-inner {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem 1.25rem;
+}
+
+.sub-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  text-decoration: none;
+  color: var(--ink);
+  flex-shrink: 0;
+}
+
+.sub-brand:hover {
+  opacity: 0.82;
+}
+
+.sub-brand-emblem {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: block;
+}
+
+.sub-brand-wordmark {
+  height: 19px;
+  width: auto;
+  display: block;
+}
+
+.header-actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.header-action-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  padding: 0.48rem 0.9rem;
+  border-radius: 999px;
+  background-color: var(--surface);
+  border: 1px solid var(--border-strong);
+  color: var(--ink);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.header-action-btn svg {
+  width: 15px;
+  height: 15px;
+  color: var(--olive-deep);
+  flex-shrink: 0;
+}
+
+.header-action-btn:hover,
+.header-action-btn:focus-visible {
+  color: var(--ink);
+  border-color: var(--olive);
+  background-color: var(--olive-soft);
+}
+
+.back-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.45rem 0.9rem;
+  border-radius: 999px;
+  background-color: var(--surface);
+  border: 1px solid var(--border-strong);
+  color: var(--ink);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.back-pill:hover,
+.back-pill:focus-visible {
+  color: var(--ink);
+  border-color: var(--olive);
+  background-color: var(--olive-soft);
+}
+
+/* =========================================================
    LANDING PAGE (/)
    ========================================================= */
 .landing {
   flex: 1 0 auto;
-  padding-block: 3.25rem 2.5rem;
+  padding-block: 3rem 2.25rem;
 }
 
 /* Brand Hero */
@@ -117,17 +216,17 @@ a:focus-visible {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 1.25rem;
-  margin-bottom: 1.35rem;
+  gap: 1.4rem;
+  margin-bottom: 1.25rem;
 }
 
 .brand-emblem {
-  width: 76px;
-  height: 76px;
+  width: 92px;
+  height: 92px;
   border-radius: 50%;
   display: block;
   flex-shrink: 0;
-  box-shadow: 0 10px 26px rgba(123, 120, 34, 0.22);
+  box-shadow: 0 10px 26px rgba(123, 120, 34, 0.2);
 }
 
 .brand-wordmark-stack {
@@ -139,125 +238,33 @@ a:focus-visible {
 
 .brand-wordmark {
   display: block;
-  height: 40px;
+  height: 50px;
   width: auto;
 }
 
 .brand-wordmark-sub {
-  margin-top: 0.2rem;
+  margin-top: 0.25rem;
   padding-left: 0.1rem;
-  font-size: 0.875rem;
+  font-size: 0.95rem;
   color: var(--ink-muted);
   letter-spacing: 0.02em;
 }
 
-.credential-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  padding: 0.35rem 0.9rem;
-  border-radius: 999px;
-  background-color: var(--olive-soft);
-  border: 1px solid rgba(160, 156, 53, 0.3);
-  color: var(--olive-hover);
-  font-size: 0.8125rem;
-  font-weight: 600;
-  letter-spacing: 0.01em;
-  margin-bottom: 0.85rem;
+.hero-subline {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--ink-body);
 }
 
-.credential-dot {
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background-color: var(--olive);
-  flex-shrink: 0;
-}
-
-.hero-advisor {
-  margin: 0 0 0.3rem 0;
-  font-size: clamp(1.5rem, 3vw, 1.9rem);
-  font-weight: 600;
-  letter-spacing: -0.02em;
-  line-height: 1.22;
-  color: var(--ink);
-}
-
-.hero-tagline {
+.hero-advisor-quiet {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.875rem;
+  font-weight: 400;
   color: var(--ink-muted);
-  max-width: 48ch;
 }
 
-/* Contact Action Cards */
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 0.85rem;
-  margin-bottom: 1.1rem;
-}
-
-.contact-card {
-  display: flex;
-  align-items: center;
-  gap: 0.95rem;
-  padding: 1.1rem 1.2rem;
-  background-color: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius-md);
-  box-shadow: var(--shadow-card);
-  text-decoration: none;
-  color: var(--ink);
-}
-
-.contact-card:hover,
-.contact-card:focus-visible {
-  color: var(--ink);
-  border-color: rgba(160, 156, 53, 0.55);
-  box-shadow: var(--shadow-hover);
-  transform: translateY(-2px);
-}
-
-.icon-badge {
-  width: 42px;
-  height: 42px;
-  border-radius: 12px;
-  background-color: var(--olive-soft);
-  color: var(--olive-deep);
-  display: grid;
-  place-items: center;
-  flex-shrink: 0;
-}
-
-.icon-badge svg {
-  width: 20px;
-  height: 20px;
-}
-
-.contact-meta {
-  min-width: 0;
-}
-
-.contact-label {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--ink-muted);
-  margin-bottom: 0.12rem;
-}
-
-.contact-value {
-  display: block;
-  font-size: 0.96rem;
-  font-weight: 600;
-  color: var(--ink);
-  overflow-wrap: anywhere;
-}
-
-/* Company Registry Card */
+/* Unified Company & Office Card */
 .details-card {
   background-color: var(--surface);
   border: 1px solid var(--border);
@@ -270,8 +277,8 @@ a:focus-visible {
 .details-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.15rem 2rem;
-  padding: 1.5rem 1.5rem 1.35rem;
+  gap: 1.2rem 2rem;
+  padding: 1.5rem 1.5rem 1.4rem;
   margin: 0;
 }
 
@@ -294,6 +301,20 @@ a:focus-visible {
 .detail-muted {
   font-weight: 400;
   color: var(--ink-muted);
+}
+
+.map-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.35rem;
+  color: var(--ink);
+  text-decoration-color: rgba(123, 120, 34, 0.45);
+}
+
+.map-link:hover,
+.map-link:focus-visible {
+  color: var(--olive-hover);
+  text-decoration-color: var(--olive-hover);
 }
 
 .details-footer {
@@ -330,6 +351,22 @@ a:focus-visible {
   display: grid;
   grid-template-columns: 1fr;
   gap: 0.9rem;
+}
+
+.icon-badge {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background-color: var(--olive-soft);
+  color: var(--olive-deep);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+
+.icon-badge svg {
+  width: 20px;
+  height: 20px;
 }
 
 .legal-btn {
@@ -403,72 +440,11 @@ a:focus-visible {
 }
 
 /* =========================================================
-   SUBPAGES (/danove-poradenstvi/, /vnitrni-oznamovaci-system/, /kontakt/)
+   SUBPAGES
    ========================================================= */
-.sub-header {
-  padding-block: 1.25rem;
-  border-bottom: 1px solid var(--border);
-  background-color: rgba(255, 255, 255, 0.72);
-  backdrop-filter: blur(10px);
-}
-
-.sub-header-inner {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.sub-brand {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.7rem;
-  text-decoration: none;
-  color: var(--ink);
-}
-
-.sub-brand:hover {
-  opacity: 0.82;
-}
-
-.sub-brand-emblem {
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-  display: block;
-}
-
-.sub-brand-wordmark {
-  height: 20px;
-  width: auto;
-  display: block;
-}
-
-.back-pill {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.4rem;
-  padding: 0.45rem 0.9rem;
-  border-radius: 999px;
-  background-color: var(--surface);
-  border: 1px solid var(--border-strong);
-  color: var(--ink);
-  font-size: 0.875rem;
-  font-weight: 500;
-  text-decoration: none;
-  white-space: nowrap;
-}
-
-.back-pill:hover,
-.back-pill:focus-visible {
-  color: var(--ink);
-  border-color: var(--olive);
-  background-color: var(--olive-soft);
-}
-
 .sub-main {
   flex: 1 0 auto;
-  padding-block: 2.5rem 2.5rem;
+  padding-block: 2.5rem;
 }
 
 .paper-card {
@@ -536,7 +512,7 @@ a:focus-visible {
 
 /* Footer */
 .site-footer {
-  padding-block: 1.5rem 2.25rem;
+  padding-block: 1.25rem 2.25rem;
   text-align: center;
   font-size: 0.8125rem;
   color: var(--ink-muted);
@@ -549,26 +525,21 @@ a:focus-visible {
 /* Responsive */
 @media (min-width: 680px) {
   .landing {
-    padding-block: 4.25rem 2.75rem;
+    padding-block: 3.75rem 2.5rem;
   }
 
   .brand-emblem {
-    width: 88px;
-    height: 88px;
+    width: 110px;
+    height: 110px;
   }
 
   .brand-wordmark {
-    height: 46px;
-  }
-
-  .contact-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
+    height: 60px;
   }
 
   .details-grid {
     grid-template-columns: repeat(3, 1fr);
-    padding: 1.75rem 2rem 1.5rem;
+    padding: 1.75rem 2rem 1.55rem;
   }
 
   .details-footer {
