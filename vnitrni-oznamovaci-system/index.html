@@ -12,19 +12,19 @@
   <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <a class="brand-link" href="/" aria-label="IN:COME ÚČTO s.r.o. – úvodní stránka">
-        <img class="brand-wordmark" src="/assets/logo-wordmark-light.svg" alt="IN:COME">
-        <span class="brand-suffix">účto s.r.o.</span>
+  <header class="sub-header">
+    <div class="shell shell--narrow sub-header-inner">
+      <a class="sub-brand" href="/" aria-label="IN:COME ÚČTO s.r.o. – úvodní stránka">
+        <img class="sub-brand-emblem" src="/assets/logo-emblem-light.svg" alt="" width="34" height="34">
+        <img class="sub-brand-wordmark" src="/assets/logo-wordmark-dark.svg" alt="IN:COME ÚČTO s.r.o.">
       </a>
-      <a class="header-back" href="/">&larr; Úvod</a>
+      <a class="back-pill" href="/">&larr; Zpět na úvod</a>
     </div>
   </header>
 
-  <main class="site-main">
-    <div class="container">
-      <article class="content-prose prose">
+  <main class="sub-main">
+    <div class="shell shell--narrow">
+      <article class="paper-card prose">
         <h1 class="page-title">Vnitřní oznamovací systém</h1>
         <p class="page-subtitle">Informace pro oznamovatele dle AML zákona a zákona o ochraně oznamovatelů</p>
 
@@ -76,20 +76,38 @@
           <a href="https://oznamovatel.justice.cz/chci-podat-oznameni/" target="_blank" rel="noopener noreferrer">Ministerstvu spravedlnosti</a>.
         </p>
       </article>
+
+      <div class="sub-nav-cards">
+        <a class="legal-btn" href="/danove-poradenstvi/">
+          <span class="legal-btn-left">
+            <span class="icon-badge" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                <path d="M14 2v6h6"/>
+                <path d="M16 13H8"/>
+                <path d="M16 17H8"/>
+                <path d="M10 9H8"/>
+              </svg>
+            </span>
+            <span>
+              <span class="legal-btn-title">Základní informace o daňovém poradenství</span>
+              <span class="legal-btn-desc">Zákon č. 523/1992 Sb., odpovědnost za škodu, pojištění a mlčenlivost</span>
+            </span>
+          </span>
+          <span class="legal-btn-arrow" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M5 12h14"/>
+              <path d="m12 5 7 7-7 7"/>
+            </svg>
+          </span>
+        </a>
+      </div>
     </div>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <div class="footer-inner">
-        <nav class="footer-nav" aria-label="Povinné informace a kontakt">
-          <a href="/kontakt/">Kontakt</a>
-          <span class="footer-sep" aria-hidden="true">&middot;</span>
-          <a href="/danove-poradenstvi/">Základní informace o daňovém poradenství</a>
-          <span class="footer-sep" aria-hidden="true">&middot;</span>
-          <a href="/vnitrni-oznamovaci-system/" aria-current="page">Vnitřní oznamovací systém</a>
-        </nav>
-      </div>
+    <div class="shell shell--narrow">
+      <p>IN:COME ÚČTO s.r.o. &middot; Daňové poradenství Znojmo</p>
     </div>
   </footer>
 </body>
