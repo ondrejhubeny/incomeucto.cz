@@ -196,7 +196,7 @@ a:focus-visible {
    ========================================================= */
 .landing {
   flex: 1 0 auto;
-  padding-block: 3rem 2.25rem;
+  padding-block: 2.5rem 2rem;
 }
 
 /* Brand Hero */
@@ -205,7 +205,7 @@ a:focus-visible {
   flex-direction: column;
   align-items: center;
   text-align: center;
-  margin-bottom: 2.5rem;
+  margin-bottom: 2rem;
 }
 
 .brand-lockup {
@@ -213,12 +213,12 @@ a:focus-visible {
   align-items: center;
   justify-content: center;
   gap: 1.4rem;
-  margin-bottom: 1.25rem;
+  margin-bottom: 1rem;
 }
 
 .brand-emblem {
-  width: 92px;
-  height: 92px;
+  width: 90px;
+  height: 90px;
   border-radius: 50%;
   display: block;
   flex-shrink: 0;
@@ -234,53 +234,40 @@ a:focus-visible {
 
 .brand-wordmark {
   display: block;
-  height: 50px;
+  height: 48px;
   width: auto;
 }
 
 .brand-wordmark-sub {
-  margin-top: 0.25rem;
+  margin-top: 0.22rem;
   padding-left: 0.1rem;
-  font-size: 0.95rem;
+  font-size: 0.92rem;
   color: var(--ink-muted);
   letter-spacing: 0.02em;
 }
 
 .hero-subline {
-  margin: 0 0 0.35rem 0;
+  margin: 0;
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--ink-body);
 }
 
-.hero-advisors {
-  display: flex;
-  flex-direction: column;
-  gap: 0.15rem;
-}
-
-.hero-advisor-quiet {
-  margin: 0;
-  font-size: 0.875rem;
-  font-weight: 400;
-  color: var(--ink-muted);
-}
-
-/* Unified Company & Office Card */
+/* Unified Company Card */
 .details-card {
   background-color: var(--surface);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-card);
   overflow: hidden;
-  margin-bottom: 2.25rem;
+  margin-bottom: 1.25rem;
 }
 
 .details-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1.2rem 2rem;
-  padding: 1.5rem 1.5rem 1.4rem;
+  gap: 1.1rem 2rem;
+  padding: 1.45rem 1.5rem 1.35rem;
   margin: 0;
 }
 
@@ -290,12 +277,12 @@ a:focus-visible {
   text-transform: uppercase;
   letter-spacing: 0.06em;
   color: var(--ink-muted);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.18rem;
 }
 
 .detail-item dd {
   margin: 0;
-  font-size: 0.95rem;
+  font-size: 0.94rem;
   font-weight: 500;
   color: var(--ink);
 }
@@ -319,16 +306,90 @@ a:focus-visible {
 .details-footer {
   background-color: var(--surface-subtle);
   border-top: 1px solid var(--border);
-  padding: 1rem 1.5rem;
-  font-size: 0.875rem;
+  padding: 0.95rem 1.5rem;
+  font-size: 0.855rem;
   color: var(--ink-muted);
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.3rem;
 }
 
 .details-footer p {
   margin: 0;
+}
+
+/* Partner / Advisor Contact Cards */
+.people-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  scroll-margin-top: 1.5rem;
+}
+
+.person-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 1.35rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.person-head {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+}
+
+.person-role {
+  font-size: 0.74rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--olive-deep);
+}
+
+.person-name {
+  margin: 0;
+  font-size: 1.08rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+}
+
+.person-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  padding-top: 0.75rem;
+  border-top: 1px solid var(--border);
+}
+
+.person-contact-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+  color: var(--ink);
+  font-size: 0.93rem;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.person-contact-link svg {
+  width: 16px;
+  height: 16px;
+  color: var(--olive-deep);
+  flex-shrink: 0;
+}
+
+.person-contact-link:hover,
+.person-contact-link:focus-visible {
+  color: var(--olive-hover);
+  text-decoration: underline;
+  text-underline-offset: 3px;
 }
 
 /* Bottom Mandatory Info Buttons */
@@ -525,26 +586,41 @@ a:focus-visible {
 @media (min-width: 540px) {
   .details-grid {
     grid-template-columns: repeat(2, 1fr);
-    padding: 1.65rem 1.85rem 1.45rem;
+    padding: 1.55rem 1.85rem 1.4rem;
   }
 }
 
 @media (min-width: 680px) {
   .landing {
-    padding-block: 3.75rem 2.5rem;
+    padding-block: 3rem 2rem;
   }
 
   .brand-emblem {
-    width: 110px;
-    height: 110px;
+    width: 106px;
+    height: 106px;
   }
 
   .brand-wordmark {
-    height: 60px;
+    height: 58px;
+  }
+
+  .details-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.25rem 2rem;
+    padding: 1.6rem 2rem 1.45rem;
   }
 
   .details-footer {
-    padding: 1.1rem 2rem;
+    padding: 1rem 2rem;
+  }
+
+  .people-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .person-card {
+    padding: 1.45rem 1.75rem;
   }
 
   .legal-buttons {
@@ -554,13 +630,5 @@ a:focus-visible {
 
   .paper-card {
     padding: 2.75rem 3rem;
-  }
-}
-
-@media (min-width: 820px) {
-  .details-grid {
-    grid-template-columns: 1.25fr 1.05fr 1.15fr 0.8fr;
-    gap: 1.35rem 1.5rem;
-    padding: 1.75rem 2rem 1.55rem;
   }
 }
