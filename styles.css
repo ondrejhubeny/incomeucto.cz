@@ -247,10 +247,16 @@ a:focus-visible {
 }
 
 .hero-subline {
-  margin: 0 0 0.25rem 0;
+  margin: 0 0 0.35rem 0;
   font-size: 0.95rem;
   font-weight: 500;
   color: var(--ink-body);
+}
+
+.hero-advisors {
+  display: flex;
+  flex-direction: column;
+  gap: 0.15rem;
 }
 
 .hero-advisor-quiet {
