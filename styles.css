@@ -323,7 +323,7 @@ a:focus-visible {
   display: grid;
   grid-template-columns: 1fr;
   gap: 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1.25rem;
   scroll-margin-top: 1.5rem;
 }
 
@@ -390,6 +390,65 @@ a:focus-visible {
   color: var(--olive-hover);
   text-decoration: underline;
   text-underline-offset: 3px;
+}
+
+/* Pricing Card */
+.pricing-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-card);
+  padding: 1.35rem 1.5rem;
+  margin-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 1rem 1.75rem;
+}
+
+.pricing-copy {
+  min-width: 0;
+}
+
+.pricing-label {
+  margin: 0 0 0.25rem 0;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--olive-deep);
+}
+
+.pricing-text {
+  margin: 0;
+  font-size: 0.94rem;
+  color: var(--ink-body);
+}
+
+.pricing-rate {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.3rem;
+  padding: 0.55rem 1rem;
+  border-radius: 12px;
+  background-color: var(--olive-soft);
+  border: 1px solid rgba(160, 156, 53, 0.26);
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.pricing-amount {
+  font-size: 1.25rem;
+  font-weight: 600;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+
+.pricing-unit {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--olive-hover);
 }
 
 /* Bottom Mandatory Info Buttons */
@@ -621,6 +680,12 @@ a:focus-visible {
 
   .person-card {
     padding: 1.45rem 1.75rem;
+  }
+
+  .pricing-card {
+    flex-direction: row;
+    align-items: center;
+    padding: 1.35rem 1.75rem;
   }
 
   .legal-buttons {
