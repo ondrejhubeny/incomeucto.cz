@@ -124,15 +124,8 @@ a:focus-visible {
   opacity: 0.82;
 }
 
-.sub-brand-emblem {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-  display: block;
-}
-
 .sub-brand-wordmark {
-  height: 19px;
+  height: 22px;
   width: auto;
   display: block;
 }
